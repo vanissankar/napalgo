@@ -5,77 +5,61 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Napalgo - Next-Gen Innovation</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="Napalgo___Logo_White_f-removebg-preview.png">
-</head>
-<body>
-  <!-- Header -->
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Napalgo - Next-Gen Innovation</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="Napalgo___Logo_White_f-removebg-preview.png">
-  
-    <style>
-      /* Prevent dragging & copying images */
-      img {
-        pointer-events: none;
-        -webkit-user-drag: none;
-        user-drag: none;
-      }
-      /* Optional: make overlay containers */
-      .protected {
-        position: relative;
-        display: inline-block;
-      }
-      .protected::after {
-        content: "";
-        position: absolute;
-        top: 0; left: 0;
-        right: 0; bottom: 0;
-        background: transparent;
-      }
-    </style>
-  </head>
-  <body oncontextmenu="return false">
-    <!-- Header -->
-    <header>
-      <div class="logo">
-        <!-- Wrap logo in .protected -->
-        <div class="protected">
-          <img src="Napalgo___Logo_White_f-removebg-preview.png" alt="NAPALGO Logo">
-        </div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#goals">Goals</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <link rel="icon" type="image/png" href="Side Front.png">
 
-  <section class="section" id="hero">
-    <div class="logo-row">
+  <style>
+    /* Prevent dragging & copying images */
+    img {
+      pointer-events: none;
+      -webkit-user-drag: none;
+      user-drag: none;
+    }
+    .protected {
+      position: relative;
+      display: inline-block;
+    }
+    .protected::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background: transparent;
+    }
+  </style>
+</head>
+  <body oncontextmenu="return false">
+    <header>
+    <div class="logo">
       <div class="protected">
-        <img src="Front.png" alt="Napalgo" class="lo">
+        <img src="Side Front.png" alt="NAPALGO Logo">
       </div>
     </div>
-    <h1 class="section-title" style="font-size:2.5rem;">Next-Gen Innovation, Powered by Passion.</h1>
-    <p style="text-align:center;max-width:600px;margin:1.5rem auto 2.5rem auto;font-size:1.2rem;">
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="logo-row">
+  <img src="banner.jpg" alt="Napalgo" class="lo">
+
+  <!-- Overlay content -->
+  <div class="hero-overlay" id="hero">
+    <h1>Next-Gen Innovation, Powered by Passion.</h1>
+    <p>
       Napalgo is a student-driven IT initiative, transforming ideas into impactful projects and real-world solutions.
     </p>
-    <div style="text-align:center;">
-      <button
-        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-        class="contact-form button hero-connect-btn"
-        style="padding:0.9rem 2.5rem;font-size:1.1rem;font-weight:bold;border-radius:6px;border:none;box-shadow:0 2px 8px #17e6e633;background:var(--button-bg);color:var(--button-text);cursor:pointer;transition:background 0.2s, color 0.2s, transform 0.2s;">
-        Let's Connect
-      </button>
-    </div>
-  </section>
+    <button
+      onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+      class="hero-connect-btn">
+      Let's Connect
+    </button>
+  </div>
+</div>
 
   <!-- Features Section -->
   <!-- Services Section -->
@@ -127,7 +111,7 @@
 
 
         <div class="member-name">Cyril Christopher J</div>
-        <div class="member-role">Founder & Lead</div>
+        <div class="member-role">Founder & CEO</div>
         <div class="social-bar">
       <a href="https://www.linkedin.com/in/cyrilchristopherj28?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
         <!-- LinkedIn SVG -->
@@ -165,7 +149,7 @@
 </div>
 
         <div class="member-name">Ashok A</div>
-        <div class="member-role">Tech Lead</div>
+        <div class="member-role">CTO & Creative Director</div>
         <div class="social-bar">
       <a href="https://www.linkedin.com/in/ashok-ashok-36189932a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
         <!-- LinkedIn SVG -->
@@ -183,7 +167,7 @@
 </div>
 
         <div class="member-name">Anis Sankar V</div>
-        <div class="member-role">Project Manager</div>
+        <div class="member-role">Stratagy Advisor</div>
         <div class="social-bar">
       <a href="https://www.linkedin.com/in/anissankar-v?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
         <!-- LinkedIn SVG -->
@@ -256,7 +240,7 @@
       .then(function() {
         alert("Message Sent Successfully ✅");
       }, function(error) {
-        alert("Failed to Send ❌: " + JSON.stringify(error));
+        alert("Try again later❌: " + JSON.stringify(error));
       });
   });
 </script>
@@ -282,7 +266,7 @@
       </div>
       <div style="display:flex;gap:1.5rem;">
         <a href="#hero" style="color:var(--link);text-decoration:none;">Home</a>
-        <a href="#features" style="color:var(--link);text-decoration:none;">Features</a>
+        <a href="#services" style="color:var(--link);text-decoration:none;">Services</a>
         <a href="#about" style="color:var(--link);text-decoration:none;">About</a>
         <a href="#goals" style="color:var(--link);text-decoration:none;">Goals</a>
         <a href="#contact" style="color:var(--link);text-decoration:none;">Contact</a>
