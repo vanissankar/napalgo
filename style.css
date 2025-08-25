@@ -36,7 +36,7 @@ header {
   z-index: 100;
   box-shadow: var(--shadow);
   min-height: clamp(40px, 6vh, 50px);
-  height: auto;
+  max-height: 4px;
   gap: clamp(0.5rem, 2vw, 2rem); /* spacing scales too */
 }
 
@@ -86,7 +86,7 @@ nav a::after {
 }
 nav a:hover {
   color: var(--link-hover);
-  text-shadow: 0 2px 8px #ffd60044;
+  text-shadow: 0 2px 8px #fcac0044;
 }
 nav a:hover::after {
   width: 100%;
@@ -103,7 +103,7 @@ nav a:hover::after {
   border-radius: 10%;
   width: 50px;
   height: 40px;
-  box-shadow: 0 2px 8px #ffd60033;
+  box-shadow: 0 2px 8px #fcac0033;
   outline: 2px solid transparent;
   position: relative;
   opacity: 70%;
@@ -140,7 +140,7 @@ nav a:hover::after {
   text-align: center;
   font-weight: 800;
   letter-spacing: 1px;
-  text-shadow: 0 2px 8px #ffd60022;
+  text-shadow: 0 2px 8px #fcac0022;
   animation: fadeIn 1s both;
 }
 
@@ -163,7 +163,7 @@ nav a:hover::after {
   border-radius: 10px;
   min-width: 220px;
   flex: 1 1 250px;
-  box-shadow: 0 1px 8px #ffd60011;
+  box-shadow: 0 1px 8px #fcac0011;
   border: 1px solid var(--border);
   transition: transform 0.2s, box-shadow 0.2s;
   animation: fadeInUp 1s both;
@@ -184,7 +184,7 @@ nav a:hover::after {
   background: var(--secondary-bg);
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 1px 8px #ffd60011;
+  box-shadow: 0 1px 8px #fcac0011;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,7 +209,7 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px #ffd60033;
+  box-shadow: 0 2px 8px #fcac0033;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -264,7 +264,7 @@ nav a:hover::after {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, transform 0.2s;
-  box-shadow: 0 2px 8px #ffd60033;
+  box-shadow: 0 2px 8px #fcac0033;
 }
 .contact-form button:hover {
   background: #fcac00;
@@ -309,7 +309,7 @@ nav a:hover::after {
   width: 48px;
   height: 48px;
   font-size: 1.5rem;
-  box-shadow: 0 2px 8px #ffd60033;
+  box-shadow: 0 2px 8px #fcac0033;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -329,14 +329,14 @@ body.light {
   --secondary-bg: #fffbe0;
   --secondary-text: #181818;
   --card-bg: #fff;
-  --border: #ffe066;
-  --accent: #ffd600;
+  --border: #fcac00;
+  --accent: #fcac00;
   --accent-hover: #ffea00;
-  --button-bg: #ffd600;
+  --button-bg: #fcac00;
   --button-text: #181818;
   --button-hover: #ffea00;
   --link: #181818;
-  --link-hover: #ffd600;
+  --link-hover: #fcac00;
   --shadow: 0 2px 12px rgba(255,214,0,0.10);
 }
 
@@ -356,7 +356,7 @@ body.light .team-card {
 
 body.light .section-title {
   color: var(--accent);
-  text-shadow: 0 2px 8px #ffd60022;
+  text-shadow: 0 2px 8px #fcac0022;
 }
 
 body.light nav a {
@@ -414,7 +414,7 @@ body.light #theme-toggle {
 body.light .goal-card:hover,
 body.light .team-card:hover {
   
-  box-shadow: 0 6px 24px #ffd60099;
+  box-shadow: 0 6px 24px #fcac0099;
   /* ...existing code for transform, etc. */
 }
 
@@ -492,7 +492,7 @@ body.light .team-card:hover {
   object-fit: cover;   /* ensures the image fills the circle without distortion */
   border-radius: 50%;  /* makes it circular */
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px #ffd60033;
+  box-shadow: 0 2px 8px #fcac0033;
   transition: transform 0.2s;
 }
 
