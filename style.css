@@ -35,9 +35,8 @@ header {
   top: 0;
   z-index: 100;
   box-shadow: var(--shadow);
-  min-height: clamp(40px, 6vh, 50px);
-  max-height: 4px;
-  gap: clamp(0.5rem, 2vw, 2rem); /* spacing scales too */
+  min-height: clamp(10px, 6vh, 50px);
+  gap: clamp(0.5rem, 2vw, 2rem);
 }
 
 
@@ -224,7 +223,6 @@ nav a:hover::after {
   margin-bottom: 0.5rem;
 }
 
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -325,8 +323,8 @@ nav a:hover::after {
 /* Light Theme */
 body.light {
   --primary-bg: #fffde7;
-  --primary-text: #181818;
-  --secondary-bg: #fffbe0;
+  --primary-text: #090000;
+  --secondary-bg: #ffffff;
   --secondary-text: #181818;
   --card-bg: #fff;
   --border: #fcac00;
@@ -410,14 +408,10 @@ body.light #theme-toggle {
   color: var(--button-text);
 }
 
-/* Light theme Our Goals and Our Team card hover effect with yellow shadow */
 body.light .goal-card:hover,
 body.light .team-card:hover {
-  
   box-shadow: 0 6px 24px #fcac0099;
-  /* ...existing code for transform, etc. */
 }
-
 
 @media (max-width: 900px) {
   header {
@@ -450,30 +444,16 @@ body.light .team-card:hover {
     bottom: 0.7rem;
   }
   header {
-    flex-direction: row;   /* ✅ Keep it horizontal */
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
   }
-
   nav ul {
-    gap: clamp(0.4rem, 1.5vw, 1rem); /* ✅ reduce spacing instead of stacking */
+    gap: clamp(0.4rem, 1.5vw, 1rem);
   }
-
-  
-}
-.social-bar a span {
-  font-size: 2rem;
-  display: inline-block;
-  vertical-align: middle;
-  color: #fcac00; /* match other icons */
-  transition: color 0.2s, transform 0.2s;
 }
 
-.social-bar a span:hover {
-  color: #2ecc40;
-  transform: scale(1.2) rotate(-10deg);
-}
 .social-bar a span {
   font-size: 2rem;
   display: inline-block;
@@ -481,36 +461,132 @@ body.light .team-card:hover {
   color: #fcac00;
   transition: color 0.2s, transform 0.2s;
 }
-
 .social-bar a span:hover {
   color: #2ecc40;
   transform: scale(1.2) rotate(-10deg);
 }
+
 .member-photo img {
   width: 150px;
   height: 150px;
-  object-fit: cover;   /* ensures the image fills the circle without distortion */
-  border-radius: 50%;  /* makes it circular */
+  object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px #fcac0033;
   transition: transform 0.2s;
 }
 
 .team-card:hover .member-photo img {
-  transform: scale(1.05); /* optional hover effect for photo */
+  transform: scale(1.05);
 }
+
 .logo-row {
-  display: flex;
-  justify-content: center;  /* centers horizontally */
-  align-items: center;      /* centers vertically within the row */
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .lo {
-  max-width: 100%;   /* makes sure it won’t exceed container */
-  height: auto;      /* keeps aspect ratio */
-  margin: 0;
-  display: block;
-  border-radius: 8px; /* optional: rounded corners */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  opacity: 0.8;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  background: rgba(9, 250, 25, 0);
+  border: none;
+  box-shadow: none;
+  border-radius: 12px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  color: #fcac00;
+  text-shadow: 0 0 8px rgba(252, 172, 0, 0.7),
+               0 0 16px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 0 6px rgba(0,0,0,0.8);
+  margin-bottom: 2rem;
+}
+
+.hero-overlay button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(252,172,0,0.4);
+}
+
+.hero-overlay button:hover {
+  background: var(--button-hover);
+  color: var(--primary-bg);
+  transform: scale(1.08);
+  border-color: #fcac00;
+  box-shadow: 0 6px 20px rgb(5, 3, 0);
+
+}
+
+/* 📱 Responsive Fix */
+@media (max-width: 768px) {
+  .hero-overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .hero-overlay button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .hero-overlay button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+}
+.hero-overlay button:hover {
+  box-shadow: 0 6px 20px rgba(252,172,0,0.6) !important;
 }
