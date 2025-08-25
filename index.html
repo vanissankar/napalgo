@@ -9,27 +9,60 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="Napalgo___Logo_White_f-removebg-preview.png" alt="NAPALGO Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#goals">Goals</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Napalgo - Next-Gen Innovation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Napalgo___Logo_White_f-removebg-preview.png">
+  
+    <style>
+      /* Prevent dragging & copying images */
+      img {
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+      }
+      /* Optional: make overlay containers */
+      .protected {
+        position: relative;
+        display: inline-block;
+      }
+      .protected::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body oncontextmenu="return false">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <!-- Wrap logo in .protected -->
+        <div class="protected">
+          <img src="Napalgo___Logo_White_f-removebg-preview.png" alt="NAPALGO Logo">
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#goals">Goals</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Hero Section -->
   <section class="section" id="hero">
     <div class="logo-row">
-    <img src="Front.png" alt="Napalgo" class="lo">
-  </div>
+      <div class="protected">
+        <img src="Front.png" alt="Napalgo" class="lo">
+      </div>
+    </div>
     <h1 class="section-title" style="font-size:2.5rem;">Next-Gen Innovation, Powered by Passion.</h1>
     <p style="text-align:center;max-width:600px;margin:1.5rem auto 2.5rem auto;font-size:1.2rem;">
       Napalgo is a student-driven IT initiative, transforming ideas into impactful projects and real-world solutions.
@@ -261,5 +294,14 @@
   </footer>
 
   <script src="app.js"></script>
+  <!-- Disable right-click on images only -->
+  <script>
+    document.addEventListener("contextmenu", function(e) {
+      if (e.target.tagName === "IMG") {
+        e.preventDefault();
+        alert("Saving images is disabled on this site.");
+      }
+    });
+  </script>
 </body>
 </html>
